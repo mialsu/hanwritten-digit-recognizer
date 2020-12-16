@@ -140,5 +140,8 @@ cython_debug/
 # VSCode settings
 .vscode/
 
-# Trained model
+# Trained model, last drawn digit pictures
 mnist.h5
+test.png
+test_resized.png
+test_resized_converted.png

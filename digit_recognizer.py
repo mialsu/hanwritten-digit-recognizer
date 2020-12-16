@@ -15,8 +15,8 @@ x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
 input_shape = (28, 28, 1)
 
 # convert class vectors to binary class matrices (make them catecorigal)
-y_train = keras.utils.to_categorical(y_train, num_classes=10)
-y_test = keras.utils.to_categorical(y_test, num_classes=10)
+y_train = keras.utils.to_categorical(y_train)
+y_test = keras.utils.to_categorical(y_test)
 
 # convert inputs to correct form
 x_train = x_train.astype('float32')
@@ -32,7 +32,7 @@ print(x_test.shape[0], 'test samples')
 # create a CNN model
 batch_size = 128
 num_classes = 10
-epochs = 10
+epochs = 15
 
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=input_shape))
