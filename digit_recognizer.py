@@ -30,9 +30,9 @@ print(x_train.shape[0], 'train samples')
 print(x_test.shape[0], 'test samples')
 
 # create a CNN model
-batch_size = 128
+batch_size = 256
 num_classes = 10
-epochs = 15
+epochs = 150
 
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=input_shape))

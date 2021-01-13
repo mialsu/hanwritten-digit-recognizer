@@ -58,7 +58,7 @@ class App(tk.Tk):
     def draw_lines(self, event):
         self.x = event.x
         self.y = event.y
-        r=10
+        r=7.5
         self.canvas.create_oval(self.x-r, self.y-r, self.x + r, self.y + r, fill='black')
 
 app = App()
