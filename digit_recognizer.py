@@ -30,9 +30,9 @@ print(x_train.shape[0], 'train samples')
 print(x_test.shape[0], 'test samples')
 
 # create a CNN model
-batch_size = 256
+batch_size = 200
 num_classes = 10
-epochs = 150
+epochs = 10
 
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=input_shape))
@@ -44,7 +44,7 @@ model.add(Dense(256, activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
-model.compile(loss=keras.losses.categorical_crossentropy,optimizer=keras.optimizers.Adadelta(),metrics=['accuracy'])
+model.compile(loss=keras.losses.categorical_crossentropy,optimizer='adam',metrics=['accuracy'])
 
 # train and save the model
 hist = model.fit(x_train, y_train,batch_size=batch_size,epochs=epochs,verbose=1,validation_data=(x_test, y_test))
