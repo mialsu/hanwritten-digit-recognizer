@@ -142,6 +142,4 @@ cython_debug/
 
 # Trained model, last drawn digit pictures
 mnist.h5
-test.png
-test_resized.png
-test_resized_converted.png
+image.png
